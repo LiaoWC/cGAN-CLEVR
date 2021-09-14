@@ -4,6 +4,8 @@
 
 Conditional GAN: 我們要能夠在給定 class label 的情況下，讓 generator 產生相應的圖片。以下實驗使用 CLEVR 資料集，此資料集的圖片內包含了不同顏色/不同形狀的物體，共有 24 個種類，每張圖片可能包含不只一種物體。Evaluate 的方式則是使用 pretrained classifier 來對圖片進行分類，看 GAN 產出的圖片能否被 classifier 成功分類回原本產生圖片用的 labels。
 
+實驗使用的 [CLEVR](https://cs.stanford.edu/people/jcjohns/clevr/) 資料集圖片在以下實驗 resize 成 64x64 來使用。
+
 ## Implementation Details
 
 ### Model Structures: DCGAN + Extra Label Input
